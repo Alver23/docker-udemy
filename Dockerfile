@@ -26,4 +26,6 @@ VOLUME /var/www/html
 
 RUN mv /tmp/user2.html /var/www/html/user2.html
 
-CMD apachectl -D FOREGROUND
+COPY run.sh /run.sh
+
+CMD sh /run.sh
